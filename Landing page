@@ -1,1 +1,198 @@
-landing
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            position: auto;
+        }
+        header{
+            padding:20px;
+            margin:0%;
+            margin-left: 20%;
+            margin-right: 20%;
+            background: linear-gradient(rgb(255,15,70),rgb(255,165,20));
+            background-size: 2%;   
+        }
+        main{
+        
+            padding:20px;
+            margin-right:40%; 
+            margin-bottom: 2%;   
+        }
+        #about{
+            text-align: start;
+            padding:4px;
+            margin:2%;
+            margin-right: 80%;
+            background: linear-gradient(rgb(0,23,200),rgb(34,23,10));
+            text-align: center;
+            color:red;
+            font-size: xx-large;
+        }
+        h1{
+            margin-top:2%;
+        }
+        h1:hover{
+            color:Black;
+        }
+        body {
+            font-family: Sans Bold;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+          }
+          
+          .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
+          
+          h1 {
+            text-align: center;
+            margin-top: 1px;
+            margin-bottom:2px;          
+        }
+
+          form {
+            display: grid;
+            gap: 20px;
+          } 
+          
+          .form-group {
+            display: grid;
+            gap: 10px;
+          }
+          
+          label {
+            font-weight: bold;
+          }
+          
+          input[type="text"],
+          input[type="email"],
+          input[type="tel"],
+          textarea,
+          select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+          }
+          
+          input[type="radio"] {
+            margin-right: 5px;
+          }
+          
+          button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #fff;
+           
+          
+    </style>
+</head>
+<body>
+    <header>
+      <i><center><h1>Yogesh Tech</h1></center></i> 
+       <center><h3>Work with us</h3></center>
+    </header>
+    <main>
+        <p id="about">What we are</p>
+        <p style="color:black; font-family:  cursive;font-size:x-large; margin-right:40px;"> Yogesh Tech Company Provide Employment To The all . We Work for Social Work.We help to people To Grow. </b></p>
+        <hr size="30">
+        <p style="color:black; font-family: impact;font-size:x-large; margin-right:40px;"> 
+            Yogesh Tech company is IT company which work for the  different Field.we provide freelancing features </b></p>
+    </p>
+    </main>
+    <center><h1>Register Yourself For This Opportunity!!</h1></center>
+    
+
+    <div class="container">
+        <h1>Company Registration</h1>
+        <form id="registrationForm" onsubmit="submitForm(event)">
+          <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" pattern="[0-9]{10}" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="Field">Field:</label>
+            <select id="Field" required>
+              <option value="">Select a Field</option>
+              <option value="Computer operator">computer operator</option>
+              <option value="web developer">web developer</option>
+              <option value="Data analyst">Data analyst</option>
+            </select>
+          </div>
+    
+          <div class="form-group">
+            <label for="Tell us about yourself">Tell us about yourself:</label>
+            <textarea id="Tell us about yourself" rows="4" required></textarea>
+          </div>
+    
+          <div class="form-group">
+            <label for="gender">Gender:</label>
+            <div>
+              <input type="radio" id="male" name="gender" value="male" required>
+              <label for="male">Male</label>
+            </div>
+            <div>
+              <input type="radio" id="female" name="gender" value="female" required>
+              <label for="female">Female</label>
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required>
+          </div>
+    
+          <button type="submit">Register</button>
+        </form>
+      </div>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+          
+            // Fetch form values
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var course = document.getElementById("course").value;
+            var message = document.getElementById("message").value;
+          
+            // Perform form validation and submission logic
+            // Here you can add your own custom logic or use a library like jQuery/AJAX to submit the form data to a server
+          
+            // Reset form fields
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("phone").value = "";
+            document.getElementById("course").value = "";
+            document.getElementById("message").value = "";
+          
+            alert("Thank you for registering!");
+          }
+          
+    </script>
+    
+</body>
+</html>
+
